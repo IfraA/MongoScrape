@@ -10,6 +10,7 @@
     <style>
         body {
             background-color: white;
+            color: grey;
         }
 
         #wrapper {
@@ -19,6 +20,17 @@
             padding-top: 5%;
 
         }
+
+        /* .jumbotron .background-image {
+            height: 100%;
+            /* background-image: url(Assets/img/header.jpg); */
+
+        .header {
+            font-size: 50px;
+            color: rgb(16, 184, 35);
+        }
+
+
 
         #articles {
             display: inline-block;
@@ -31,29 +43,36 @@
         #notes {
             float: right;
             width: 30%;
+            font-size: 15px;
+            color: grey;
+
+            border: grey solid 1px;
+            padding: 20px;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 20px;
         }
 
         textarea,
         input {
             display: block;
-            width: 100%;
-            background-color: #FCF5C7;
+            width: 60%;
+            background-color: rgb(172, 240, 224);
+            color: grey;
+            font-size: 15px;
         }
 
         input {
             height: 36px;
-            font-size: 24px;
+            font-size: 15px;
         }
 
         textarea {
             height: 200px;
             font-size: 18px;
-        }
-
-        .jumbotron .background-image {
-            height: 100%;
-            background-image: url(Assets/img/header.jpg);
-            background-size: cover;
         }
     </style>
 </head>
@@ -81,21 +100,17 @@
         <div class="overlay"></div>
         <div class="background-image">
 
+
         </div>
         <div class="caption">
-            <h1>Mongo Scrape</h1>
-            <p>Get your daily dose of tech news.</p>
+            <h1 class="header">Mongo Scrape</h1>
+            <i>Get your daily dose of tech news.</i>
         </div>
 
     </div>
     <div id="wrapper">
-        <h1>Tech Crunch</h1>
-        <h2>
-
-        </h2>
+        <h1 style="font-size:20px; color: rgb(16, 184, 35)">Tech Crunch</h1>
         <div id="articles">
-
-
         </div>
     </div>
     <div id="notes"></div>
