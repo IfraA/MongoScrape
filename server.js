@@ -29,6 +29,24 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/TechCrunch");
 
+//connect to heroku
+
+var databaseUri = 'mongodb://localhost/TechCrunch';
+if (process.env.MONGOD_URI) {
+    mongoose.coonect(process.env.MONGOD_URI);
+} else {
+    mongoose.connect(databaseUri);
+}
+
+var db = mongoose.connection;
+
+db.on('error', function (err) {
+    console.log('Mongoose Error:', err);
+});
+
+db.once('open', function () {
+    console.log('Mongoose connection successful.');
+});
 // Routes
 
 // A GET route for scraping the echoJS website
